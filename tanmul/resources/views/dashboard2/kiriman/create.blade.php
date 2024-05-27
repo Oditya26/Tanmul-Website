@@ -40,7 +40,7 @@
                     name="tgl_kirim"
                     id="tgl_kirim"
                     placeholder="dd/mm/yyyy"
-                    value="{{ Session::get('tgl_kirim') }}">
+                    value="<?php echo empty(Session::get('tgl_kirim')) ? date('Y-m-d') : Session::get('tgl_kirim'); ?>">
                 </div>
 
                 <div class="form-input">
@@ -58,7 +58,7 @@
 
                 <div class="form-input">
                     <label for="nama_plg" class="form-label">Nama Pelanggan</label>
-                    <select name="nama_plg" id="nama_plg">
+                    <select name="nama_plg" id="nama_plg" class="select">
                         @foreach ($data2 as $item)
                             <option value="{{ $item['nama_plg'] }}" {{ Session::get('nama_plg') == $item['nama_plg'] ? 'selected' : '' }}>
                                 {{ $item['nama_plg'] }}

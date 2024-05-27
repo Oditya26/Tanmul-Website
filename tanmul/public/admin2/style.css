@@ -46,9 +46,22 @@ body {
 	overflow-x: hidden;
 }
 
+#sidebar {
+	transition: transform 0.3s ease;
+  }
 
+#myTable_wrapper {
+	max-width: 100%; /* Set lebar maksimum wrapper tabel */
+}
 
+#myTable {
+	width: 100% !important; /* Set lebar tabel menjadi 100% */
+}
 
+#myTable th,
+#myTable td {
+	width: auto; /* Set lebar kolom menjadi otomatis sesuai konten */
+}
 
 /* SIDEBAR */
 #sidebar {
@@ -160,6 +173,9 @@ body {
 /* SIDEBAR */
 
 
+
+
+
 /* Styling untuk form dan elemen-elemen di dalamnya */
 .form-input {
     margin-bottom: 16px;
@@ -220,7 +236,61 @@ body {
 	text-align: left !important;
 }
 
-select#sat_qty {
+
+
+.select2-selection--single {
+	background-color: var(--grey);
+    border-radius: 20px;
+    padding: 18px 16px;
+    border: none;
+    font-family: var(--lato);
+    color: var(--dark);
+    width: 500px; /* Menyesuaikan lebar dengan lebar elemen induk */
+    box-sizing: border-box;
+}
+
+/* CSS untuk opsi */
+
+.select2-results__options {
+	padding: 0px;
+	width: 100%;
+    font-family: var(--lato);
+    color: var(--dark);
+	background-color: var(--light);
+}
+
+.select2-results {
+    display: block;
+	color: var(--dark);
+	max-width: 100%; /* Agar tidak melebihi lebar kontainer induk */
+    overflow-x: hidden; /* Sembunyikan overflow horizontal */
+    box-sizing: border-box;
+}
+
+.select2-search--dropdown {
+    padding: 0px;
+	width: 100%;
+    font-family: var(--lato);
+    color: var(--light);
+	background-color: var(--light);
+}
+
+.select2-search__field {
+	padding: 0px;
+	width: 700px;
+    font-family: var(--lato);
+    color: var(--dark);
+	background-color: var(--light);
+}
+
+.select2-selection__rendered {
+	margin-top: -10px;
+	margin-left: -5px;
+	color: var(--dark);
+	width: 700px;
+}
+
+.select#sat_qty {
 	color: var(--dark);
     width: 100%; /* Lebar sesuaikan dengan kebutuhan */
     padding: 10px; /* Ruang di dalam kotak seleksi */

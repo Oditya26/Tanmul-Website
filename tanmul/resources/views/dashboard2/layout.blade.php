@@ -7,8 +7,10 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="{{asset('admin2')}}/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+	<link rel="stylesheet" href="{{asset('admin2')}}/style.css">
+
 	<title>AdminHub</title>
 </head>
 <body>
@@ -95,7 +97,16 @@
                 var today = new Date().toISOString().split('T')[0];
                 tglKirimInput.value = today;
             }
+			"responsive": true // Aktifkan responsif DataTables
         });
     </script>
+	<script>
+		$(document).ready(function() {
+			$('.select').select2({
+				theme:"custom"
+			});
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 </html>

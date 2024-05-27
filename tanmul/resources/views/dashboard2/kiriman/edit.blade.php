@@ -58,7 +58,7 @@
 
                 <div class="form-input">
                     <label for="nama_plg" class="form-label">Nama Pelanggan</label>
-                    <select name="nama_plg" id="nama_plg">
+                    <select name="nama_plg" id="nama_plg" class="select">
                         @foreach ($data2 as $item)
                             <option value="{{ $item['nama_plg'] }}" {{ $data1['nama_plg'] == $item['nama_plg'] ? 'selected' : '' }}>
                                 {{ $item['nama_plg'] }}

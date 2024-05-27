@@ -9,10 +9,10 @@
             $isi = str_replace("]]", '', $isi);
             $isi = str_replace('\n', '<br>', $isi);
             $isi = str_replace(',', '<br>', $isi);
-            $isi = str_replace("Key: 'Info_bar.Nama_bar' Error:Field validation for 'Nama_bar' failed on the 'required' tag",
-            'Nama Barang tidak boleh kosong', $isi);
-            $isi = str_replace("Key: 'Info_bar.Sat_qty' Error:Field validation for 'Sat_qty' failed on the 'required' tag",
-            'Satuan Barang tidak boleh kosong', $isi);
+            $isi = str_replace("Key: 'Trans_detail.Jml_pcs_jual' Error:Field validation for 'Jml_pcs_jual' failed on the 'required' tag",
+            'Jumlah Pcs Jual tidak boleh kosong', $isi);
+            $isi = str_replace("Key: 'Trans_detail.Diskon' Error:Field validation for 'Diskon' failed on the 'required' tag",
+            'Diskon tidak boleh kosong', $isi);
             $isi = str_replace("Key: 'Info_bar.Pcs' Error:Field validation for 'Pcs' failed on the 'required' tag",
             'Pcs Barang tidak boleh kosong', $isi);
             $isi = str_replace("Key: 'Info_bar.Hrg_jual' Error:Field validation for 'Hrg_jual' failed on the 'required' tag",
@@ -65,7 +65,7 @@
     ?>
     <div class="head-title">
         <div class="left">
-            <h1>Kiriman</h1>
+            <h1>Detail</h1>
             <ul class="breadcrumb">
                 <li>
                     <a href="{{url('dashboard')}}">Dashboard</a>
@@ -74,12 +74,16 @@
                 <li>
                     <a href="{{url('dashboard/buat-kiriman')}}">Kiriman</a>
                 </li>
-                <li><i class='bx bx-chevron-right' ></i></li>
+                <li><i class='bx bx-chevron-right'></i></li>
                 <li>
-                    <a class="active" href="{{url('dashboard/details')}}">Detail</a>
+                    <a href="{{url('dashboard/buat-kiriman/'.$id_kirim.'/details')}}" class="active">Detail</a>
                 </li>
             </ul>
         </div>
+        <a href="{{route('buat-kiriman.index')}}" class="btn-download">
+            <i class='bx bx-chevron-left' ></i>
+            <span class="text">Back</span>
+        </a>
     </div>
     <br><br>
     
@@ -96,11 +100,12 @@
     @endif
 
     <div class="head-title">
-        <a href="{{route('details.create')}}" class="btn-download">
+        <a href="{{route('buat-kiriman.details.create', $id_kirim)}}" class="btn-download">
             <span class="text">Tambah Produk Baru</span>
             <i class='bx bx-plus'></i>
         </a>
     </div>
+
     <?php
         $sizeArray = count($data);
     ?>
@@ -119,12 +124,13 @@
                 <thead>
                     <tr>
                         <th>Nama Barang</th>
-                        <th>Pcs Barang</th>
+                        <th>Pcs Barang Jual</th>
                         <th>Harga Jual</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $key => $item) 
+                    @foreach ($data as $item) 
                     <tr>
                         <td>
                             <p>{{ $item['nama_bar'] }}</p>
@@ -132,11 +138,11 @@
                         <td>
                             {{ $item['jml_pcs_jual'] }}
                         </td>
-                        <td>{{ $item['hrg_jual'] }}</td>
+                        <td>{{ formatRupiah($item['hrg_jual']) }}</td>
                         <td>
                             <div class="action-buttons">
-                                <a href="{{ url('dashboard/details'.$item['id_detail']) }}" type="button" class="status process">Edit</a>
-                                <form action="{{ url('dashboard/buat-kiriman/'.$item['id_kirim'].'/'.'details/'.$item['id_detail']') }}" method="post" onsubmit="return confirm('Apakah yakin akan melakukan penghapusan data?')" class="d-inline">
+                                <a href="{{ url('dashboard/buat-kiriman/'.$item['id_kirim'].'/'.'details/'.$item['id_detail']) }}" type="button" class="status process">Edit</a>
+                                <form action="{{ url('dashboard/buat-kiriman/'.$item['id_kirim'].'/'.'details/'.$item['id_detail']) }}" method="post" onsubmit="return confirm('Apakah yakin akan melakukan penghapusan data?')" class="d-inline">
                                     @csrf
                                     @method('delete')
                                     <button class="status pending" type="submit" name="submit">Delete</button>

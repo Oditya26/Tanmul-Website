@@ -5,10 +5,13 @@ allSideMenu.forEach(item => {
   const li = item.parentElement;
 
   item.addEventListener('click', function () {
-	allSideMenu.forEach(i => {
-	  i.parentElement.classList.remove('active');
-	});
-	li.classList.add('active');
+    // Menyembunyikan sidebar saat menu diklik
+    sidebar.classList.add('hide');
+
+    allSideMenu.forEach(i => {
+      i.parentElement.classList.remove('active');
+    });
+    li.classList.add('active');
   });
 });
 
@@ -23,23 +26,32 @@ menuBar.addEventListener('click', function () {
 // Switch mode
 const switchMode = document.getElementById('switch-mode');
 
+// Periksa apakah ada preferensi mode yang disimpan di localStorage
+const savedMode = localStorage.getItem('mode');
+if (savedMode) {
+  switchMode.checked = savedMode === 'dark'; // Atur switch mode sesuai preferensi yang disimpan
+  document.body.classList.toggle('dark', savedMode === 'dark'); // Atur tema sesuai preferensi yang disimpan
+}
+
 switchMode.addEventListener('change', function () {
   if (this.checked) {
-	document.body.classList.add('dark');
+    document.body.classList.add('dark');
+    localStorage.setItem('mode', 'dark'); // Simpan preferensi mode ke localStorage
   } else {
-	document.body.classList.remove('dark');
+    document.body.classList.remove('dark');
+    localStorage.setItem('mode', 'light'); // Simpan preferensi mode ke localStorage
   }
 });
 
 // Handle window resize for sidebar
-if (window.innerWidth < 768) {
+if (window.innerWidth < 2000) {
   sidebar.classList.add('hide');
 }
 
 window.addEventListener('resize', function () {
-  if (this.innerWidth < 768) {
-	sidebar.classList.add('hide');
+  if (this.innerWidth < 2000) {
+    sidebar.classList.add('hide');
   } else {
-	sidebar.classList.remove('hide');
+    sidebar.classList.remove('hide');
   }
 });

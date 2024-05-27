@@ -33,6 +33,15 @@ Route::prefix('dashboard')->middleware('auth')->group(
         Route::resource('pelanggan', pelangganController::class);
         Route::resource('stock', stockController::class);
         Route::resource('buat-kiriman', buatKirimanController::class);
-        Route::resource('details', detailController::class);
+        
+        Route::prefix('buat-kiriman/{id_kirim}/details')->group(function() {
+            Route::get('/', [DetailController::class, 'index'])->name('buat-kiriman.details.index');
+            Route::get('create', [DetailController::class, 'create'])->name('buat-kiriman.details.create');
+            Route::post('/', [DetailController::class, 'store'])->name('buat-kiriman.details.store');
+            Route::get('{id_detail}', [DetailController::class, 'show'])->name('buat-kiriman.details.show');
+            Route::get('{id_detail}/edit', [DetailController::class, 'edit'])->name('buat-kiriman.details.edit');
+            Route::put('{id_detail}', [DetailController::class, 'update'])->name('buat-kiriman.details.update');
+            Route::delete('{id_detail}', [DetailController::class, 'destroy'])->name('buat-kiriman.details.destroy');
+        });
     }
 );

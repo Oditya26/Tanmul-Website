@@ -143,7 +143,7 @@
                         </td>
                         <td>
                             <div class="action-buttons">
-                                <a href="{{ url('dashboard/kiriman/'.$item['id_kirim'].'/details') }}" type="button" class="status detail">Detail</a>
+                                <a href="{{ url('dashboard/buat-kiriman/'.$item['id_kirim'].'/details') }}" type="button" class="status detail">Detail</a>
                             </div>
                         </td>
                     </tr>
