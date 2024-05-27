@@ -11,6 +11,6 @@
 
 ![AdminHub - Google Chrome 5_27_2024 10_24_46 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/8cf41f70-43e8-49e1-bc3e-eb40da8debe3)
 
-![AdminHub - Google Chrome 5_27_2024 10_23_51 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/1b14cac2-5ce6-49db-aa5b-4550f064f364)
+![AdminHub - Google Chrome 5_27_2024 10_33_36 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/2b517406-1aea-4229-9649-b6547924e1f1)
 
 ![AdminHub - Google Chrome 5_27_2024 10_25_11 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/352c986b-3044-4ef2-b64e-63f4e9fe2c41)
