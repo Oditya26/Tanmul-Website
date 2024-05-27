@@ -9,8 +9,8 @@
 <br>
 <h3>UI/UX dari website :</h3>
 
-![AdminHub - Google Chrome 5_27_2024 10_24_46 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/6024c893-8d51-434c-8ca8-1aa6c867014a)
+![AdminHub - Google Chrome 5_27_2024 10_24_46 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/8cf41f70-43e8-49e1-bc3e-eb40da8debe3)
 
-![AdminHub - Google Chrome 5_27_2024 10_23_12 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/e2abfc02-cd63-4f99-b6ea-a1353d0378ce)
+![AdminHub - Google Chrome 5_27_2024 10_23_12 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/2c2a867f-046e-4c53-8473-9eab01f4693f)
 
-![AdminHub - Google Chrome 5_27_2024 10_25_11 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/ff282a63-1073-4d79-8523-40350c93a2c4)
+![AdminHub - Google Chrome 5_27_2024 10_25_11 PM](https://github.com/Oditya26/Tanmul-Website/assets/151801552/352c986b-3044-4ef2-b64e-63f4e9fe2c41)
