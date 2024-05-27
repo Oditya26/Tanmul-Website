@@ -48,7 +48,7 @@
 
                 <div class="form-input">
                     <label for="sat_qty" class="form-label">Satuan Barang</label>
-                    <select name="sat_qty" id="sat_qty">
+                    <select name="sat_qty" id="sat_qty" class="select">
                         <option value="bal" {{$data1['sat_qty'] == "bal" ? 'selected' : '' }}>bal</option>
                         <option value="karton" {{$data1['sat_qty'] == "karton" ? 'selected' : '' }}>karton</option>
                         <option value="pack" {{$data1['sat_qty'] == "pack" ? 'selected' : '' }}>pack</option>

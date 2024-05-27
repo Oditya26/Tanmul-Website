@@ -171,28 +171,32 @@ class detailController extends Controller
         $jml_pcs_jual = $request->jml_pcs_jual;
         $diskon = $request->diskon;
 
+
         $client = new Client();
 
         $url = "http://127.0.0.1:8080/api/infobar";
-        $response =  $response = $client->request('GET', $url, [
-            'query' => ['nama_bar' => $nama_bar]
-        ]);
+        $response =  $response = $client->request('GET', $url);
         $content = $response->getBody()->getContents();
         $contentArray = json_decode($content, true);
         $data = $contentArray['data'];
 
-        if (!$data) {
-            return redirect()->to('dashboard/buat-kiriman/' . $id_kirim . '/details')->withErrors('Barang tidak ditemukan')->withInput();
+        $data_baru = null; // Definisikan variabel $data_baru di luar foreach
+
+        foreach ($data as $item) {
+            if ($item['nama_bar'] == $nama_bar) {
+                $data_baru = $item;
+                break; // Keluar dari loop setelah menemukan item yang sesuai
+            }
         }
 
-        $hrg_jual_baru = $data['hrg_jual'] - $diskon;
+        $hrg_jual_baru = $data_baru['hrg_jual'] - $diskon;
 
         $parameter = [
-            'id_kirim' => $id_kirim,
+            'id_kirim' => intval($id_kirim),
             'nama_bar' => $nama_bar,
-            'jml_pcs_jual' => $jml_pcs_jual,
-            'hrg_jual' => $hrg_jual_baru,
-            'diskon' => $diskon,
+            'jml_pcs_jual' => intval($jml_pcs_jual),
+            'hrg_jual' => intval($hrg_jual_baru),
+            'diskon' => intval($diskon),
         ];
 
         $url = "http://127.0.0.1:8080/api/transdetail/$id_detail";
