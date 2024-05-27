@@ -134,7 +134,7 @@ class detailController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified source.
      */
     public function edit($id_kirim, string $id)
     {

@@ -1,5 +1,6 @@
 @extends('dashboard2.layout')
 @section('main')
+
 <main>
     <div class="head-title">
         <div class="left">
