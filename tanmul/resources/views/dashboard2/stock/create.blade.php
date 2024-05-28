@@ -48,7 +48,7 @@
 
                 <div class="form-input">
                     <label for="sat_qty" class="form-label">Satuan Barang</label>
-                    <select name="sat_qty" id="sat_qty">
+                    <select name="sat_qty" id="sat_qty" class="select">
                         <option value="" {{ Session::get('sat_qty') == "" ? 'selected' : '' }}>- Pilih Satuan</option>
                         <option value="bal" {{ Session::get('sat_qty') == "bal" ? 'selected' : '' }}>bal</option>
                         <option value="karton" {{ Session::get('sat_qty') == "karton" ? 'selected' : '' }}>karton</option>
