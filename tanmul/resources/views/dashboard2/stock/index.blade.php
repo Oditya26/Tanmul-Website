@@ -115,7 +115,7 @@
             }
         ?>
         <li>
-            <i class='bx bx-money'></i>
+            <i class='bx bx-arrow-from-top' ></i>
             <span class="text">
                 <h3>{{formatRupiah($totalPemasukkan)}}</h3>
                 <p>Total Pemasukkan</p>
@@ -128,9 +128,19 @@
             }
         ?>
         <li>
-            <i class='bx bxs-wallet' ></i>
+            <i class='bx bx-arrow-from-bottom'></i>
             <span class="text">
                 <h3>{{formatRupiah($totalPengeluaran)}}</h3>
+                <p>Total Pengeluaran</p>
+            </span>
+        </li>
+        <?php
+            $profit = $totalPemasukkan - $totalPengeluaran;
+        ?>
+        <li>
+            <i class='bx bx-money'></i>
+            <span class="text">
+                <h3>{{formatRupiah($profit)}}</h3>
                 <p>Total Pengeluaran</p>
             </span>
         </li>

@@ -29,6 +29,8 @@ li {
 	--light-yellow: #FFF2C6;
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
+	--light-green: #9DDE8B;
+	--green: #40A578;
 }
 
 html {
@@ -644,6 +646,10 @@ form.d-inline {
 #content main .box-info li:nth-child(3) .bx {
 	background: var(--light-orange);
 	color: var(--orange);
+}
+#content main .box-info li:nth-child(4) .bx {
+	background: var(--light-green);
+	color: var(--green);
 }
 #content main .box-info li .text h3 {
 	font-size: 24px;
