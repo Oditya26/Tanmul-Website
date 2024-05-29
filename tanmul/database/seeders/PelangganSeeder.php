@@ -14,7 +14,7 @@ class PelangganSeeder extends Seeder
     public function run(): void
     {
         $faker = \Faker\Factory::create('id_ID');
-        for($i=0; $i<10; $i++) {
+        for($i=0; $i<100; $i++) {
             DB::table('pelanggan')->insert([
                 'nama_plg'=>$faker->name,
                 'telp_plg'=>$faker->phoneNumber,

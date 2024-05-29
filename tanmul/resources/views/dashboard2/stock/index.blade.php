@@ -141,7 +141,7 @@
             <i class='bx bx-money'></i>
             <span class="text">
                 <h3>{{formatRupiah($profit)}}</h3>
-                <p>Total Pengeluaran</p>
+                <p>Total Keuntungan</p>
             </span>
         </li>
     </ul>
