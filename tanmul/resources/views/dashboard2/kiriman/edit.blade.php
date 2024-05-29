@@ -14,7 +14,7 @@
                 </li>
                 <li><i class='bx bx-chevron-right' ></i></li>
                 <li>
-                    <a class="active" href="{{url('dashboard/buat-kiriman/'.$data1['id_kirim'])}}">Edit Kiriman</a>
+                    <a class="active" href="{{url('dashboard/buat-kiriman/'.$data1['id_kirim'])}}">Buat Kiriman</a>
                 </li>
             </ul>
         </div>
