@@ -3,7 +3,7 @@
 <main>
     <div class="head-title">
         <div class="left">
-            <h1>Tambah Data</h1>
+            <h1>Edit Kiriman</h1>
             <ul class="breadcrumb">
                 <li>
                     <a href="{{url('dashboard')}}">Dashboard</a>
@@ -14,7 +14,7 @@
                 </li>
                 <li><i class='bx bx-chevron-right' ></i></li>
                 <li>
-                    <a class="active" href="{{url('dashboard/buat-kiriman/'.$data1['id_kirim'])}}">Buat Kiriman</a>
+                    <a class="active" href="{{url('dashboard/buat-kiriman/'.$data1['id_kirim'])}}">Edit Kiriman</a>
                 </li>
             </ul>
         </div>
@@ -27,7 +27,7 @@
     <div class="table-data">
         <div class="todo">
             <div class="head">
-                <h3>Buat Kiriman Baru</h3>
+                <h3>Edit Data Kiriman</h3>
             </div>
             
             <form action="{{route('buat-kiriman.update', $data1['id_kirim'])}}" method="POST">

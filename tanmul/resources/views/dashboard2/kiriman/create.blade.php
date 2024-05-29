@@ -3,7 +3,7 @@
 <main>
     <div class="head-title">
         <div class="left">
-            <h1>Tambah Data</h1>
+            <h1>Buat Kiriman Baru</h1>
             <ul class="breadcrumb">
                 <li>
                     <a href="{{url('dashboard')}}">Dashboard</a>
@@ -27,7 +27,7 @@
     <div class="table-data">
         <div class="todo">
             <div class="head">
-                <h3>Buat Kiriman Baru</h3>
+                <h3>Buat Data Baru</h3>
             </div>
             
             <form action="{{route('buat-kiriman.store')}}" method="POST">
