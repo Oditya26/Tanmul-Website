@@ -10,8 +10,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
 	<link rel="stylesheet" href="{{asset('admin2')}}/style.css">
+	<link rel="shortcut icon" href="{{asset('admin')}}/images/logo-tanmul.svg" />
 
-	<title>AdminHub</title>
+	<title>Tanmul</title>
 </head>
 <body>
 
@@ -46,7 +47,7 @@
 			
 			<li>
 				<a href="{{url('auth/logout')}}" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
+					<i class='bx bxs-log-out'></i>
 					<span class="text">Logout</span>
 				</a>
 			</li>
