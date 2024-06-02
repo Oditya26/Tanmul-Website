@@ -118,7 +118,7 @@
             <i class='bx bx-arrow-from-top' ></i>
             <span class="text">
                 <h3>{{formatRupiah($totalPemasukkan)}}</h3>
-                <p>Total Pemasukkan</p>
+                <p>Omset</p>
             </span>
         </li>
         <?php
@@ -131,7 +131,7 @@
             <i class='bx bx-arrow-from-bottom'></i>
             <span class="text">
                 <h3>{{formatRupiah($totalPengeluaran)}}</h3>
-                <p>Total Pengeluaran</p>
+                <p>Modal</p>
             </span>
         </li>
         <?php
@@ -141,7 +141,7 @@
             <i class='bx bx-money'></i>
             <span class="text">
                 <h3>{{formatRupiah($profit)}}</h3>
-                <p>Total Keuntungan</p>
+                <p>Laba Kotor</p>
             </span>
         </li>
     </ul>

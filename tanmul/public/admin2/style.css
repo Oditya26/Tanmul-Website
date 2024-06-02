@@ -292,6 +292,10 @@ body {
 	width: 700px;
 }
 
+.select2-container {
+    width: 100% !important;
+}
+
 .select#sat_qty {
 	color: var(--dark);
     width: 100%; /* Lebar sesuaikan dengan kebutuhan */
