@@ -110,8 +110,8 @@
         </li>
         <?php
             $totalPemasukkan = 0;
-            foreach ($data1 as $item) {
-                $totalPemasukkan += $item['hrg_jual'] * $item['pcs'];
+            foreach ($data3 as $item) {
+                $totalPemasukkan += $item['hrg_jual'] * $item['jml_pcs_jual'];
             }
         ?>
         <li>

@@ -26,7 +26,13 @@ class stockController extends Controller
         $contentArray2 = json_decode($content2, true);
         $data2 = $contentArray2['data'];
 
-        return view('dashboard2.stock.index',['data1' => $data1, 'data2'=>$data2]);
+        $url3 = "http://127.0.0.1:8080/api/transdetail";
+        $response3 = $client->request('GET', $url3);
+        $content3 = $response3->getBody()->getContents();
+        $contentArray3 = json_decode($content3, true);
+        $data3 = $contentArray3['data'];
+
+        return view('dashboard2.stock.index',['data1' => $data1, 'data2'=>$data2, 'data3'=>$data3]);
     }
 
     /**
