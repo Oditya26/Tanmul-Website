@@ -26,6 +26,7 @@ class stockController extends Controller
         $contentArray2 = json_decode($content2, true);
         $data2 = $contentArray2['data'];
 
+<<<<<<< HEAD
        // Array of quotes
        $quotes = [
         "The difference between ordinary and extraordinary is that little extra.",
@@ -74,6 +75,7 @@ class stockController extends Controller
         emotify($randomType, $randomQuote);
 
         return view('dashboard2.stock.index',['data1' => $data1, 'data2'=>$data2]);
+=======
         $url3 = "http://127.0.0.1:8080/api/transdetail";
         $response3 = $client->request('GET', $url3);
         $content3 = $response3->getBody()->getContents();
@@ -81,6 +83,7 @@ class stockController extends Controller
         $data3 = $contentArray3['data'];
 
         return view('dashboard2.stock.index',['data1' => $data1, 'data2'=>$data2, 'data3'=>$data3]);
+>>>>>>> a83944ab8d11c9eb67a40d79a08c8f1a20792010
     }
 
     /**
