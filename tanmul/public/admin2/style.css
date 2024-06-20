@@ -206,7 +206,7 @@ body {
     padding: 10px 24px;
     border: none;
     border-radius: 20px; /* Membulatkan sudut tombol */
-    background-color: var(--blue);
+    background-color: var(--blue) !important;
     color: var(--light);
     cursor: pointer;
     transition: background-color 0.3s;
