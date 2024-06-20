@@ -107,11 +107,6 @@ class detailController extends Controller
         $jml_pcs_jual = $request->jml_pcs_jual;
         $diskon = $request->diskon;
 
-        // Validasi untuk memeriksa apakah ada angka negatif
-        if ($jml_pcs_jual < 0 || $diskon < 0) {
-            $error = 'Nilai tidak boleh negatif.';
-            return redirect()->to('dashboard/buat-kiriman/' . $id_kirim . '/details')->withErrors($error)->withInput();
-        }
         
         $client = new Client();
         
@@ -224,10 +219,6 @@ class detailController extends Controller
         $jml_pcs_jual = $request->jml_pcs_jual;
         $diskon = $request->diskon;
 
-        if ($jml_pcs_jual < 0 || $diskon < 0) {
-            $error = 'Nilai tidak boleh negatif.';
-            return redirect()->to('dashboard/buat-kiriman/' . $id_kirim . '/details')->withErrors($error)->withInput();
-        }
 
         $client = new Client();
 

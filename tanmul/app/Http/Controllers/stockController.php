@@ -111,12 +111,6 @@ class stockController extends Controller
             return redirect()->to('dashboard/stock')->withErrors($error)->withInput();
         }
 
-        // Validasi untuk memeriksa apakah ada nilai negatif
-        if ($pcs < 0 || $hrg_jual < 0 || $hrg_beli < 0 || $stok_aman < 0 || $stok_now < 0 || $stok_retur < 0) {
-            $error = 'Nilai tidak boleh negatif.';
-            return redirect()->to('dashboard/stock')->withErrors($error)->withInput();
-        }
-
         $parameter1 = [
             'nama_bar' => $nama_bar,
             'sat_qty' => $sat_qty,
@@ -238,12 +232,6 @@ class stockController extends Controller
         if (empty($nama_bar) || empty($sat_qty) || empty($pcs) || empty($hrg_jual) || empty($hrg_beli) || 
             empty($stok_aman) || empty($stok_now)) {
             $error = 'Semua data harus diisi.';
-            return redirect()->to('dashboard/stock')->withErrors($error)->withInput();
-        }
-
-        // Validasi untuk memeriksa apakah ada nilai negatif
-        if ($pcs < 0 || $hrg_jual < 0 || $hrg_beli < 0 || $stok_aman < 0 || $stok_now < 0 || $stok_retur < 0) {
-            $error = 'Nilai tidak boleh negatif.';
             return redirect()->to('dashboard/stock')->withErrors($error)->withInput();
         }
 
