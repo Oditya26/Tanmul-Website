@@ -11,10 +11,14 @@
 	<link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
 	<link rel="stylesheet" href="{{asset('admin2')}}/style.css">
 	<link rel="shortcut icon" href="{{asset('admin')}}/images/logo-tanmul.svg" />
+	@notifyCss
 
 	<title>Tanmul</title>
 </head>
 <body>
+	<div class="notify-container">
+		<x-notify::notify />
+	</div>
 
 
 	<!-- SIDEBAR -->
@@ -109,5 +113,7 @@
 		});
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	
+    @notifyJs
 </body>
 </html>

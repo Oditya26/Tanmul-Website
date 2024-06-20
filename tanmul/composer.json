@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.14",
         "laravel/tinker": "^2.8",
+        "mckenziearts/laravel-notify": "^2.5",
         "psr/http-message": "^2.0"
     },
     "require-dev": {

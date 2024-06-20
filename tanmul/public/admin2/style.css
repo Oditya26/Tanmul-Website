@@ -206,7 +206,7 @@ body {
     padding: 10px 24px;
     border: none;
     border-radius: 20px; /* Membulatkan sudut tombol */
-    background-color: var(--blue);
+    background-color: var(--blue) !important;
     color: var(--light);
     cursor: pointer;
     transition: background-color 0.3s;
@@ -852,4 +852,11 @@ form.d-inline {
 	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
+}
+
+.notify-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10000;
 }
