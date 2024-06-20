@@ -853,3 +853,10 @@ form.d-inline {
 		min-width: 420px;
 	}
 }
+
+.notify-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10000;
+}
